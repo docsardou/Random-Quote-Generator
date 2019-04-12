@@ -1,3 +1,4 @@
+//Quotes found on https://www.keepinspiring.me/famous-quotes/
 var quotes = [{
     Quote: "You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.",
     Author: 'Dr.Seus'
@@ -23,4 +24,3 @@ var quotes = [{
     Quote: "Great minds discuss ideas; average minds discuss events; small minds discuss people",
     Author: "Eleanor Roosevelt"
 }];
-''
