@@ -1,1 +1,1 @@
-# Random Quote Generator
+# Random Quote Generator By Andres Sardou
