@@ -34,22 +34,30 @@ var quotes = [{
     Year: '1965'
 }];
 
-
-
-
 // Funtion that generates a random Quote from the quotes array
 
 function getRandomQuote() {
     var i = Math.floor(Math.random() * 7);
     return quotes[i];
 }
-//Testing the getRandomQuote function in the console
-console.log(getRandomQuote());
+
+// Creates a random background color
+
+function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + ", " + y + ", " + z + ")";
+
+    document.body.style.background = bgColor;
+}
 
 /*
 Funtion that creates an HTML string of a random quote. 
 Quotes also containing Citation, Year, or both are tested with 'IF' statements. 
+Calls random background function with each random quote generated. 
 */
+
 function printQuote() {
     var randomQuote = getRandomQuote();
     var HTMLmessage = '';
@@ -65,12 +73,9 @@ function printQuote() {
     var div = document.getElementById('quote-box');
     div.innerHTML = HTMLmessage;
 
-
+    random_bg_color();
     return HTMLmessage;
 }
-
-
-
 /*
 Displays a new quote on page when use clicks "Show another quote".
 */
