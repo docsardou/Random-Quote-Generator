@@ -40,7 +40,7 @@ var quotes = [{
 // Funtion that generates a random Quote from the quotes array
 
 function getRandomQuote() {
-    var i = Math.floor(Math.random() * 9);
+    var i = Math.floor(Math.random() * 7);
     return quotes[i];
 }
 //Testing the getRandomQuote function in the console
