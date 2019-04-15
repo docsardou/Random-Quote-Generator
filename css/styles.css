@@ -104,3 +104,11 @@ body {
     font-size: 1.25rem;
   }
 }
+.category:before {
+  content: ", ";
+  font-style: normal;
+}
+.category {
+  font-style: normal;
+
+}
