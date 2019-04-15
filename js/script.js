@@ -52,7 +52,7 @@ function getRandomQuote() {
     var i = Math.floor(Math.random() * 9);
     return quotes[i];
 }
-//Test in the console
+//Testing the getRandomQuote function in the console
 console.log(getRandomQuote());
 
 
@@ -69,12 +69,18 @@ console.log(getRandomQuote());
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
-var HTML = '';
+
 
 function printQuote() {
-    var quote = getRandomQuote();
+    var randomQuote = getRandomQuote();
+    var HTML = '';
+    HTML += '<p class="quote">' + randomQuote.Quote + '</p>';
+    HTML += '<p class="source">' + randomQuote.Author + '</p>';
 
+    var div = document.getElementById('quote-box');
+    div.innerHTML = HTML;
 
+    return HTML;
 }
 
 
