@@ -16,29 +16,35 @@ project 1 - A Random Quote Generator
 ***/
 //Quotes found on https://www.keepinspiring.me/famous-quotes/
 var quotes = [{
-    Quote: "You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.",
-    Author: 'Dr.Seus'
+    Quote: "It's the possibility of having a dream come true that makes life interesting.",
+    Author: 'Paulo Coelho',
+    Citation: 'The Alchemist',
+    Year: '1988'
 }, {
-    Quote: "I’m selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can’t handle me at my worst, then you sure as hell don’t deserve me at my best.",
-    Author: 'Marilyn Monroe'
+    Quote: "I cannot fix on the hour, or the spot, or the look or the words, which laid the foundation. It is too long ago. I was in the middle before I knew that I had begun.",
+    Author: 'Jane Austen',
+    Citation: 'Pride and Prejudice',
+    Year: '1797'
 }, {
-    Quote: 'Get busy living or get busy dying.',
-    Author: 'Stephen King'
+    Quote: 'There is no greater agony than bearing an untold story inside you.',
+    Author: 'Maya Angelou',
+    Citation: ' I Know Why the Caged Bird Sings',
+    Year: '1968'
 }, {
-    Quote: 'The first step toward success is taken when you refuse to be a captive of the environment in which you first find yourself.',
-    Author: 'Mark Caine'
+    Quote: 'Still, there are times I am bewildered by each mile I have traveled, each meal I have eaten, each person I have known, each room in which I have slept. As ordinary as it all appears, there are times when it is beyond my imagination.',
+    Author: 'Jhumpa Lahiri',
+    Citation: 'Interpreter of Maladies',
+    Year: '1999'
 }, {
-    Quote: "When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.",
-    Author: "Helen Keller"
+    Quote: "And so we beat on, boats against the current, borne back ceaselessly into the past.",
+    Author: "F. Scott Fitzgerald",
+    Citation: 'The Great Gatsby',
+    Year: '1924'
 }, {
-    Quote: "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do",
-    Author: "Mark Twain"
-}, {
-    Quote: "When I dare to be powerful – to use my strength in the service of my vision, then it becomes less and less important whether I am afraid.",
-    Author: 'Audre Lorde'
-}, {
-    Quote: "Great minds discuss ideas; average minds discuss events; small minds discuss people",
-    Author: "Eleanor Roosevelt"
+    Quote: "Hello, babies. Welcome to Earth. It's hot in the summer and cold in the winter. It's round and wet and crowded. At the outside, babies, you've got about a hundred years here. There's only one rule that I know of, babies—God damn it, you've got to be kind.",
+    Author: "Kurt Vonnegut",
+    Citation: "God Bless You, Mr. Rosewater",
+    Year: '1965'
 }];
 
 
@@ -75,10 +81,17 @@ function printQuote() {
     var randomQuote = getRandomQuote();
     var HTML = '';
     HTML += '<p class="quote">' + randomQuote.Quote + '</p>';
-    HTML += '<p class="source">' + randomQuote.Author + '</p>';
-
+    HTML += '<p class="source">' + randomQuote.Author;
+    if (randomQuote.Citation) {
+        HTML += '<span class="citation">' + randomQuote.Citation + '</span>';
+    }
+    if (randomQuote.Year) {
+        HTML += '<span class="year">' + randomQuote.Year + '</span>';
+    }
+    HTML += '</p>';
     var div = document.getElementById('quote-box');
     div.innerHTML = HTML;
+
 
     return HTML;
 }
